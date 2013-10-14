@@ -5,6 +5,7 @@ from django.conf.urls import patterns, include, url
 # admin.autodiscover()
 
 urlpatterns = patterns('',
+    url(r'^tl', include('timeline.urls')),
     # Examples:
     # url(r'^$', 'minitwitter.views.home', name='home'),
     # url(r'^minitwitter/', include('minitwitter.foo.urls')),
