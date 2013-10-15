@@ -6,8 +6,8 @@ from django.conf import settings
 # admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^tl', include('timeline.urls')),
-    url(r'^api/{0}'.format(settings.API_VERSION), include('api.urls')),
+    url(r'^tl/', include('timeline.urls')),
+    url(r'^api/{0}/'.format(settings.API_VERSION), include('api.urls')),
     # Examples:
     # url(r'^$', 'minitwitter.views.home', name='home'),
     # url(r'^minitwitter/', include('minitwitter.foo.urls')),
