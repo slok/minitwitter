@@ -1,4 +1,5 @@
 from django.conf.urls import patterns, include, url
+from django.conf import settings
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
@@ -6,6 +7,7 @@ from django.conf.urls import patterns, include, url
 
 urlpatterns = patterns('',
     url(r'^tl', include('timeline.urls')),
+    url(r'^api/{0}'.format(settings.API_VERSION), include('api.urls')),
     # Examples:
     # url(r'^$', 'minitwitter.views.home', name='home'),
     # url(r'^minitwitter/', include('minitwitter.foo.urls')),
